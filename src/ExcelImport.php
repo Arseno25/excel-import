@@ -19,6 +19,6 @@ class ExcelImport implements ToCollection, WithHeadingRow
         protected string $model,
         protected array $attributes = [],
     ) {
-        //
+
     }
 }
