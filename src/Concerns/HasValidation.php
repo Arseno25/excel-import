@@ -1,27 +1,12 @@
 <?php
 
-namespace Arseno25\ExcelImport;
+namespace Arseno25\ExcelImport\Concerns;
 
 use Filament\Notifications\Notification;
 use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\ToCollection;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class DefaultExcelImport implements ToCollection, WithHeadingRow
+trait HasValidation
 {
-
-    public bool $hasDuplicate = false;
-
-    public function __construct(
-        protected string $model,
-        protected array $attributes = [],
-    ) {
-        //
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function collection(Collection $collection): void
     {
         $duplicates = [];

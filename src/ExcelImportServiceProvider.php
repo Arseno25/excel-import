@@ -57,6 +57,9 @@ class ExcelImportServiceProvider extends PackageServiceProvider
         //
     }
 
+    /**
+     * @throws \ReflectionException
+     */
     public function packageBooted(): void
     {
         FilamentAsset::register(

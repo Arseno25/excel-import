@@ -8,6 +8,6 @@ class ExcelImportAction extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Arseno25\ExcelImport\ExcelImportAction::class;
+        return \Arseno25\ExcelImport\Action\ImportAction::class;
     }
 }
