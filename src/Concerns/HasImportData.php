@@ -3,7 +3,6 @@
 namespace Arseno25\ExcelImport\Concerns;
 
 use Closure;
-
 use Filament\Notifications\Notification;
 use Maatwebsite\Excel\Excel;
 
@@ -26,6 +25,7 @@ trait HasImportData
                     ->body('There was an error validating the data. Please check the data and try again.')
                     ->warning()
                     ->send();
+
                 return false;
             }
 
